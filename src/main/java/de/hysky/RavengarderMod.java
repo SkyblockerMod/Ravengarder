@@ -1,5 +1,6 @@
 package de.hysky;
 
+import de.hysky.utils.RavengardInfo;
 import net.fabricmc.api.ClientModInitializer;
 import net.minecraft.resources.Identifier;
 
@@ -11,5 +12,7 @@ public class RavengarderMod implements ClientModInitializer {
 	}
 
 	@Override
-	public void onInitializeClient() {}
+	public void onInitializeClient() {
+		RavengardInfo.init();
+	}
 }

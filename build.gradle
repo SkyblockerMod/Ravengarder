@@ -18,6 +18,20 @@ repositories {
 			includeGroup "maven.modrinth"
 		}
 	}
+
+	maven {
+		url = "https://maven.azureaaron.net/releases"
+		content {
+			includeGroup "net.azureaaron"
+		}
+	}
+
+	maven {
+		url = "https://maven.azureaaron.net/snapshots"
+		content {
+			includeGroup "net.azureaaron"
+		}
+	}
 }
 
 dependencies {
@@ -30,6 +44,7 @@ dependencies {
 
 	implementation "maven.modrinth:skyblocker-liap:${project.skyblocker_version}"
 	implementation "net.fabricmc:fabric-language-kotlin:${project.flk_version}"
+	implementation "net.azureaaron:hm-api:${project.hm_api_version}"
 }
 
 processResources {
