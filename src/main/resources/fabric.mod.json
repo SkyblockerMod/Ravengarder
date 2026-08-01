@@ -3,26 +3,26 @@
 	"id": "ravengarder",
 	"version": "${version}",
 	"name": "Ravengarder",
-	"description": "This is an example description! Tell everyone what your mod is about!",
-	"authors": [
-		"Me!"
-	],
+	"description": "Hypixel Ravengard Mod",
+	"authors": ["Skyblocker Team"],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://hysky.de",
+		"sources": "https://github.com/SkyblockerMod/Ravengarder",
+		"issues": "https://github.com/SkyblockerMod/Ravengarder/issues"
 	},
-	"license": "CC0-1.0",
+	"license": "LGPL-3.0-or-later",
 	"icon": "assets/ravengarder/icon.png",
-	"environment": "*",
+	"environment": "client",
 	"entrypoints": {
-		"main": [
-			"de.hysky.Ravengarder"
+		"client": [
+          "de.hysky.RavengarderMod"
 		]
 	},
 	"mixins": [
 		"ravengarder.mixins.json"
 	],
 	"depends": {
+		"skyblocker": ">=6",
 		"fabricloader": ">=0.19.3",
 		"minecraft": "~26.2",
 		"java": ">=25",
