@@ -1,8 +1,11 @@
 {
 	"required": true,
-	"package": "de.hysky.mixin",
+	"package": "de.hysky.mixins",
 	"compatibilityLevel": "JAVA_25",
-	"mixins": [
+	"client": [
+		"AbstractContainerMenuMixin",
+		"AbstractContainerScreenMixin",
+		"InventoryMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
