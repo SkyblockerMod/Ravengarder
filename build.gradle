@@ -1,6 +1,7 @@
 plugins {
 	id 'net.fabricmc.fabric-loom' version "${loom_version}"
 	id 'maven-publish'
+	id "me.modmuss50.mod-publish-plugin" version "${mod_publish_plugin_version}"
 }
 
 version = project.mod_version
@@ -93,5 +94,42 @@ publishing {
 		// Notice: This block does NOT have the same function as the block in the top level.
 		// The repositories here will be used for publishing your artifact, not for
 		// retrieving dependencies.
+	}
+}
+
+publishMods {
+	file = jar.archiveFile
+	changelog = System.getenv('CHANGELOG_HIGHLIGHT')
+	version = "v${project.version}"
+	displayName = "Ravengarder ${project.mod_version} for ${project.minecraft_version}"
+	modLoaders.add("fabric")
+	type = project.version.contains("alpha") ? ALPHA : project.version.contains("beta") ? BETA : STABLE
+
+	github {
+		accessToken = System.getenv("GITHUB_TOKEN")
+		repository = "SkyblockerMod/Ravengarder"
+		commitish = System.getenv("REF_NAME")
+		tagName = publishMods.version
+		changelog = System.getenv("CHANGELOG")
+	}
+
+	modrinth {
+		accessToken = System.getenv("MODRINTH_TOKEN")
+		projectId = project.modrinth_id
+		minecraftVersions.add(project.minecraft_version)
+		announcementTitle = "<:modrinth:1237114573354438696> Download from Modrinth"
+		requires("fabric-api", "fabric-language-kotlin", "skyblocker-liap")
+		embeds("yacl")
+	}
+
+	curseforge {
+		accessToken = System.getenv("CURSEFORGE_TOKEN")
+		projectId = project.curseforge_id
+		minecraftVersions.add(project.minecraft_version)
+		announcementTitle = "<:curseforge:900697838453936149> Download from CurseForge"
+		projectSlug = "ravengarder"
+		client = true
+		requires("fabric-api", "fabric-language-kotlin", "skyblocker")
+		embeds("yacl")
 	}
 }
