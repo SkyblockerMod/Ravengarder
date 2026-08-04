@@ -1,9 +1,18 @@
+<img height="150" src="https://hysky.de/skyblocker.png" alt="skyblocker"/>
+
 # Ravengarder
 
-## Setup
+Hypixel Ravengard Mod for Minecraft 26.2
 
-For setup instructions, please see the [Fabric Documentation page](https://docs.fabricmc.net/develop/getting-started/creating-a-project#setting-up) related to the IDE that you are using.
+## Features
 
-## License
+<details open>
+<summary>Features</summary>
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+- **Gear Helper**
+
+</details>
+
+## Credits
+
+Brought to you by the Skyblocker team.
