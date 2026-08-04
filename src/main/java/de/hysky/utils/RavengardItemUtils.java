@@ -5,6 +5,7 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemStack;
 
+import java.util.Arrays;
 import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -35,5 +36,24 @@ public class RavengardItemUtils {
     public static float getFloatStat(ItemStack stack, Pattern pattern) {
         Matcher matcher = ItemUtils.getLoreLineIfContainsMatch(stack, pattern);
         return matcher != null ? Float.parseFloat(matcher.group(1)) : 0;
+    }
+
+    public enum Accessory {
+        NECK(RavengardIcons.NECK),
+        EARRING(RavengardIcons.EARRING),
+        BELT(RavengardIcons.BELT),
+        RING(RavengardIcons.RING);
+
+        private final char icon;
+
+        Accessory(char icon) {
+            this.icon = icon;
+        }
+
+        public static Optional<Accessory> from(ItemStack stack) {
+            return Arrays.stream(values())
+                    .filter(accessory -> ItemUtils.getLoreLineContains(stack, String.valueOf(accessory.icon)) != null)
+                    .findAny();
+        }
     }
 }
