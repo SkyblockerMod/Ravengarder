@@ -1,4 +1,4 @@
 @NullMarked
-package de.hysky.mixins;
+package de.hysky.ravengarder.mixins;
 
 import org.jspecify.annotations.NullMarked;

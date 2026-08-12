@@ -1,13 +1,13 @@
-package de.hysky.utils.container;
+package de.hysky.ravengarder.utils.container;
 
-import de.hysky.ravengard.items.GearHelper;
+import de.hysky.ravengarder.ravengard.items.GearHelper;
+import de.hysky.ravengarder.utils.RavengardInfo;
 import de.hysky.skyblocker.mixins.accessors.AbstractContainerScreenAccessor;
 import de.hysky.skyblocker.utils.container.ContainerAndInventorySolver;
 import de.hysky.skyblocker.utils.container.ContainerSolver;
 import de.hysky.skyblocker.utils.container.ContainerSolverManager;
 import de.hysky.skyblocker.utils.container.RegexContainerMatcher;
 import de.hysky.skyblocker.utils.render.gui.ColorHighlight;
-import de.hysky.utils.RavengardInfo;
 import net.fabricmc.fabric.api.client.screen.v1.ScreenEvents;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;

@@ -15,7 +15,7 @@
 	"environment": "client",
 	"entrypoints": {
 		"client": [
-          "de.hysky.RavengarderMod"
+          "de.hysky.ravengarder.RavengarderMod"
 		]
 	},
 	"mixins": [

@@ -1,6 +1,6 @@
-package de.hysky.utils;
+package de.hysky.ravengarder.utils;
 
-import de.hysky.events.RavengardEvents;
+import de.hysky.ravengarder.events.RavengardEvents;
 import net.azureaaron.hmapi.events.HypixelPacketEvents;
 import net.azureaaron.hmapi.network.packet.s2c.HypixelS2CPacket;
 import net.azureaaron.hmapi.network.packet.v1.s2c.LocationUpdateS2CPacket;

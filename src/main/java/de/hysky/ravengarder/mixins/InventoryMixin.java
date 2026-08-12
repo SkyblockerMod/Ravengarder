@@ -1,6 +1,6 @@
-package de.hysky.mixins;
+package de.hysky.ravengarder.mixins;
 
-import de.hysky.utils.container.RavengarderContainerSolverManager;
+import de.hysky.ravengarder.utils.container.RavengarderContainerSolverManager;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.item.ItemStack;
 import org.spongepowered.asm.mixin.Mixin;

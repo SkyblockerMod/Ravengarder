@@ -1,4 +1,4 @@
 @NullMarked
-package de.hysky.ravengard.items;
+package de.hysky.ravengarder.events;
 
 import org.jspecify.annotations.NullMarked;

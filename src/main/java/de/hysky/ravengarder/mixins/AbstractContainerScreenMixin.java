@@ -1,9 +1,9 @@
-package de.hysky.mixins;
+package de.hysky.ravengarder.mixins;
 
 import com.llamalad7.mixinextras.sugar.Local;
+import de.hysky.ravengarder.utils.RavengardInfo;
+import de.hysky.ravengarder.utils.container.RavengarderContainerSolverManager;
 import de.hysky.skyblocker.utils.container.ContainerSolver;
-import de.hysky.utils.RavengardInfo;
-import de.hysky.utils.container.RavengarderContainerSolverManager;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;

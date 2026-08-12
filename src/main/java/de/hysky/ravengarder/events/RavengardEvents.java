@@ -1,4 +1,4 @@
-package de.hysky.events;
+package de.hysky.ravengarder.events;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;

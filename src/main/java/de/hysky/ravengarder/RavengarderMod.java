@@ -1,7 +1,7 @@
-package de.hysky;
+package de.hysky.ravengarder;
 
-import de.hysky.utils.RavengardInfo;
-import de.hysky.utils.container.RavengarderContainerSolverManager;
+import de.hysky.ravengarder.utils.RavengardInfo;
+import de.hysky.ravengarder.utils.container.RavengarderContainerSolverManager;
 import net.fabricmc.api.ClientModInitializer;
 import net.minecraft.resources.Identifier;
 

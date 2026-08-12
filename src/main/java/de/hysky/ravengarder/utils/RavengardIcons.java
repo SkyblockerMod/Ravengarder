@@ -1,4 +1,4 @@
-package de.hysky.utils;
+package de.hysky.ravengarder.utils;
 
 public class RavengardIcons {
     public static final char NECK = '\uE22A';

@@ -1,4 +1,4 @@
-package de.hysky.utils;
+package de.hysky.ravengarder.utils;
 
 import de.hysky.skyblocker.utils.ItemUtils;
 import net.minecraft.core.component.DataComponents;

@@ -1,6 +1,6 @@
 {
 	"required": true,
-	"package": "de.hysky.mixins",
+	"package": "de.hysky.ravengarder.mixins",
 	"compatibilityLevel": "JAVA_25",
 	"client": [
 		"AbstractContainerMenuMixin",

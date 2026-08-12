@@ -1,4 +1,4 @@
-package de.hysky.utils;
+package de.hysky.ravengarder.utils;
 
 import java.util.Arrays;
 
