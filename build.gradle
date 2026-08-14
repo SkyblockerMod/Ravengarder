@@ -1,5 +1,7 @@
 plugins {
 	id 'net.fabricmc.fabric-loom' version "${loom_version}"
+	id "com.diffplug.spotless" version "${spotless_version}"
+	id "checkstyle"
 	id 'maven-publish'
 	id "me.modmuss50.mod-publish-plugin" version "${mod_publish_plugin_version}"
 }
@@ -78,6 +80,26 @@ jar {
 	from("LICENSE") {
 		rename { "${it}_$projectName"}
 	}
+}
+
+spotless {
+	java {
+		importOrder('java', 'javax', '', 'net', 'de.hysky', '\\#')
+		removeUnusedImports()
+		leadingSpacesToTabs()
+		trimTrailingWhitespace()
+		endWithNewline()
+		lineEndings = com.diffplug.spotless.LineEnding.UNIX
+	}
+}
+
+checkstyle {
+	toolVersion = "${checkstyle_version}"
+	configFile = rootProject.file("checkstyle.xml")
+	configProperties = [
+			"suppressionsFile": rootProject.file("checkstyle-suppressions.xml"),
+			"cacheFile": layout.buildDirectory.file("checkstyle/checkstyle-cache.txt").get().asFile
+	]
 }
 
 // configure the maven publication

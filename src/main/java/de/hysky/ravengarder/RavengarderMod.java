@@ -1,9 +1,10 @@
 package de.hysky.ravengarder;
 
-import de.hysky.ravengarder.utils.RavengardInfo;
-import de.hysky.ravengarder.utils.container.RavengarderContainerSolverManager;
 import net.fabricmc.api.ClientModInitializer;
 import net.minecraft.resources.Identifier;
+
+import de.hysky.ravengarder.utils.RavengardInfo;
+import de.hysky.ravengarder.utils.container.RavengarderContainerSolverManager;
 
 public class RavengarderMod implements ClientModInitializer {
 	public static final String MOD_ID = "ravengarder";
